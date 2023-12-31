@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -9,7 +9,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ChildComponent {
   @Output() public Emmiter = new EventEmitter();
-  public demo(value: any) {
-    this.Emmiter.emit(value);
+  @Input() public value: any;
+
+  public str: string = 'Hello from Child';
+  public demo() {
+    this.Emmiter.emit(this.str);
   }
 }

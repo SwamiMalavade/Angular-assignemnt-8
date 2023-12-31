@@ -12,4 +12,5 @@ import { ChildComponent } from './child/child.component';
 })
 export class AppComponent {
   public Message: any;
+  public childMessage: string = 'Hello from Parent';
 }
