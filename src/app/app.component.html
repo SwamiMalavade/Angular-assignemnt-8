@@ -1,3 +1,8 @@
-<h1>Parent Component :{{ Message }}</h1>
-<app-child (Emmiter)="Message= $event" [value]= "childMessage" ></app-child>
+<h1>
+  Parent Component
+  <input [(ngModel)]="name" type="text" />
+</h1>
+<h2>
+  Text Length= {{ name.length() }}
+</h2>
 <router-outlet></router-outlet>
