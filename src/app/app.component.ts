@@ -11,5 +11,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  public name: any;
+  public data: number = 0;
+  public demo(value: any): any {
+    this.data = value.length;
+  }
 }
